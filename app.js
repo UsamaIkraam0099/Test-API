@@ -4,11 +4,14 @@ var db = new sqlite3.Database("hifz.db");
 
 var multer = require("multer");
 
+var cors = require("cors");
+
 const router = express.Router();
 
 const app = express();
 var bodyParser = require("body-parser");
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
